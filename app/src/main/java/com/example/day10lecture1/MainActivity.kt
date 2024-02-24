@@ -14,9 +14,12 @@ class MainActivity : AppCompatActivity() {
         val gotoNextActivity = findViewById<Button>(R.id.go_to_next_page)
         gotoNextActivity.setOnClickListener {
             // explicit intent
+            // val intent = Intent(this , NextActivity::class.java)
+            // implicit intent
             val intent = Intent(this , NextActivity::class.java)
             startActivity(intent)
-            finish()
+            finish() // to close the current activity
+
         }
         val toastButton = findViewById<Button>(R.id.button2)
         toastButton.setOnClickListener {
