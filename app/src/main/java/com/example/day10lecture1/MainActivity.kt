@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import es.dmoral.toasty.Toasty
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,8 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
         val toastButton = findViewById<Button>(R.id.button2)
         toastButton.setOnClickListener {
-            val toast = Toast.makeText(this , "What is your name bharat" , Toast.LENGTH_SHORT)
-            toast.show()
+            Toasty.info(this, "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+        }
         }
     }
-}
